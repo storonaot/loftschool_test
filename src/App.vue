@@ -17,7 +17,7 @@
           .bottom.is-center
             button.button(
               v-show="currentGroupId"
-              v-on:click="updateGroup()"
+              v-on:click="updateGroup"
             ) Редактировать список
         .block.is-narrow
           h3.title(v-on:click="currentGroupId = null") Списки друзей
@@ -29,7 +29,7 @@
                 v-bind:class="currentGroupId === group.gid ? 'is-active' : ''"
               )
                 span {{ cropString(group.name) }}
-                .cross.is-delete.is-gray(v-on:click="deleteGroup")
+                .cross.is-delete.is-gray(v-on:click="deleteGroup(group.gid)")
             .empty(v-else) Создайте список
           .bottom
             button.button(
@@ -173,10 +173,9 @@
         this.currentGroupId = null
         this.flag = false
       },
-      deleteGroup() {
-
+      deleteGroup(id) {
         this.groups.forEach((group, index) => {
-          if (group.gid === this.currentGroupId) {
+          if (group.gid === id) {
             this.groups.splice(index, 1)
           }
         })
