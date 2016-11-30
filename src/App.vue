@@ -291,6 +291,7 @@
     border-bottom: 1px solid #f0f0f0
     font-size: 12px
     cursor: default
+    margin-right: 15px
     &.is-hovered
       cursor: pointer
       &:hover
