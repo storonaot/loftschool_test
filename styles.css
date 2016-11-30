@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'MarckScript';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./src/fonts/MarckScript-Regular.woff') format('woff');
+}
+@font-face{
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./src/fonts/FiraSans-Light.woff') format('woff');
+}
+
+@font-face{
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./src/fonts/FiraSans-Medium.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'FiraSans', serif;
+  font-weight: 300;
+  color: #333;
+}
+
+div {
+  box-sizing: border-box;
+}
