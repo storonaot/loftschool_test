@@ -47,7 +47,7 @@
         span.modal-title Выберите друзей
         .cross.is-delete(v-on:click="canselChanges")
       .field-group
-        input.field(
+        input.field.is-search(
           type="text"
           placeholder="Начните вводить имя друга"
           v-model="searchValue"
@@ -363,6 +363,11 @@
     &:focus
       outline: 0
       border-color: #ff7f50
+    &.is-search
+      background-image: url('./images/glass.png')
+      background-repeat: no-repeat
+      background-position: 5px center
+      padding-left: 25px
   .header, .footer
     height: 45px
     padding: 0 15px
